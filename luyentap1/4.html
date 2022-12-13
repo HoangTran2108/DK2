@@ -5,29 +5,31 @@
     <title>Title</title>
 </head>
 <body>
-<input type="text" name="" placeholder="Nhập số thứ nhất" id="so1"><br>
-<input type="text" name="" placeholder="Nhập số thứ hai" id="so2"><br>
-<input type="text" name="" placeholder="Nhập số thứ ba" id="so3"><br>
+<input type="number" name="" placeholder="Nhập số thứ nhất" id="so1"><br>
+<input type="number" name="" placeholder="Nhập số thứ hai" id="so2"><br>
+<input type="number" name="" placeholder="Nhập số thứ ba" id="so3"><br>
 <input type="button" value="kiểm tra" onclick="check()">
 <p>Số lớn nhất là:</p>
 <p id="max"></p>
 </body>
 <script>
   function check(){
-    let a=document.getElementById("so1").value
-    let b=document.getElementById("so2").value
-    let c=document.getElementById("so3").value
+    let a=parseInt(document.getElementById("so1").value);
+    let b=parseInt(document.getElementById("so2").value);
+    let c=parseInt(document.getElementById("so3").value);
+    let max;
     if (a>b){
       if (a>c){
-        document.getElementById("max").innerHTML= a
+        max = a
       }else {
-        document.getElementById("max").innerHTML= c
+        max = c
       }
     }else if (b>c){
-      document.getElementById("max").innerHTML= b
+      max = b
     }else {
-      document.getElementById("max").innerHTML= c
+      max = c
     }
+    document.getElementById("max").innerHTML=max;
   }
 </script>
 </html>
