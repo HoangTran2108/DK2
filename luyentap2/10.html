@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let num=prompt("Nhập vào số kw/h điện tiêu thụ")
+  if(num<=50){
+    let money1=num*2000
+    alert("số tiền điện phải trả là: " + money1 + "đ")
+  }else if (num<=100) {
+    let money2 = 50 * 2000 + (num - 50) * 2500
+    alert("số tiền điện phải trả là: " + money2 + "đ")
+  } else {
+    let money3= 50*2000 + 50*2500 + (num-100)*3000
+    alert("số tiền điện phải trả là: " + money3)
+  }
+</script>
+</body>
+</html>

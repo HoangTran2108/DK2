@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Giải phương trình bậc nhất</h1>
+<p>Nhập các tham số của phương trình ax + b = 0</p>
+<input type="text" name="a" value="" id="a" placeholder="Nhập tham số a"/>
+<input type="text" name="b" value="" id="b" placeholder="Nhập tham số b"/>
+<input type="button" value="Kiểm tra" onclick="test()">
+<p id="ketqua"></p>
+</body>
+<script>
+  function test(){
+    let thamsoa=+document.getElementById("a").value
+    let thamsob=+document.getElementById("b").value
+      let x=(-thamsob)/thamsoa
+    if (thamsoa ==0){
+      if (thamsob ==0) {
+        document.getElementById("ketqua").innerHTML = "Phương trinh vô số nghiệm"
+      } else {
+        document.getElementById("ketqua").innerHTML="Phương trình vô nghiệm"
+      }
+    }else {
+        document.getElementById("ketqua").innerHTML="Phương trình có nghiệm là: " + x
+    }
+  }
+</script>
+</html>

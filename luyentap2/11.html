@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let thunhap=prompt("Nhập vào số thu nhập cá nhân")
+  if(thunhap<=10000000){
+    alert("Không cần đóng thuế thu nhập cá nhân");
+  }
+  else if (thunhap<=50000000){
+    let thue1 = thunhap*5/100
+    alert("Thuế thu nhập phải đóng là: " + thue1)
+  } else {
+    let thue2 = thunhap*10/100
+    alert("Thuế thu nhập phải đóng là: " + thue2)
+  }
+</script>
+</body>
+</html>
