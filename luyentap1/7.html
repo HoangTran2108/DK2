@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let time=prompt("Nhập vào số phút")
+  if(time<=30){
+    let money30=time*1000
+    alert("số tiền thuê bao phải trả là: " + money30)
+  }else if (time<=60) {
+      let money60 = 30 * 1000 + (time - 30) * 800
+      alert("số tiền thuê bao phải trả là: " + money60)
+  } else {
+      let money90= 30*1000 + 30 * 800 + (time-60) * 600
+      alert("số tiền thuê bao phải trả là: " + money90)
+  }
+</script>
+</body>
+</html>

@@ -5,20 +5,29 @@
     <title>Title</title>
 </head>
 <body>
+<input type="number" placeholder="Nhập điểm kiểm tra" min="1" max="10" id="kiemtra" style="width: 150px"><br>
+<input type="number" placeholder="Nhập điểm Giữa kỳ" min="1" max="10" id="giuaky" style="width: 150px"><br>
+<input type="number" placeholder="Nhập điểm Cuối kỳ" min="1" max="10" id="cuoiky" style="width: 150px"><br>
+<input type="button" value="kết quả" onclick="but()">
 <script>
-    let poin=prompt("Nhập điểm");
-    if (poin>=90){
-        alert("A+")
-    }else if (poin>=80){
-        alert("A")
-    }else if (poin>=70){
-        alert("B")
-    }else if (poin>=60){
-        alert("C")
-    }else if (poin>=40){
-        alert("D")
-    }else {
-        alert("F")
+    function but() {
+        let test =+document.getElementById("kiemtra").value
+        let mid =+document.getElementById("giuaky").value
+        let last =+document.getElementById("cuoiky").value
+        let poin = test * 2 + mid * 2 + last * 6
+        if (poin >= 90) {
+            alert("A+")
+        } else if (poin >= 80) {
+            alert("A")
+        } else if (poin >= 70) {
+            alert("B")
+        } else if (poin >= 60) {
+            alert("C")
+        } else if (poin >= 40) {
+            alert("D")
+        } else {
+            alert("F")
+        }
     }
 </script>
 </body>
